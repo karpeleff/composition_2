@@ -19,3 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/des', 'HomeController@des')->name('des');
+Route::post('/des/add_work_time', 'HomeController@add_time')->name('add_time');
+
