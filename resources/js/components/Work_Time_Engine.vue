@@ -2,15 +2,15 @@
     <div class="container">
         <div class="row justify-content-center">
             <div>
-                <label>start</label>
+                <label>Время пуска</label>
                 <datetime type="datetime"  v-model="date_start" ></datetime>
-                <label>stop</label>
+                <label>Время останова</label>
                 <datetime type="datetime"  v-model="date_stop" ></datetime>
                 <br>
-                <br>
+
                 <label>Выбрать ДГУ</label>
                 <select class="browser-default custom-select" v-model="des_select" >
-                    <option value="SD16-5">SD16-5</option>
+                    <option value="ADR16-5">ADR16-5</option>
                     <option value="SD6000E">SD6000E</option>
                     <br>
                     <br>
@@ -70,9 +70,9 @@
         methods:{
             send_data: function (){
                 axios.post('des/add_work_time', {
-                    date_start: this.date_start ,
-                    date_stop:  this.date_stop,
-                    des_select: this.des_select,
+                    date_start:  this.date_start ,
+                    date_stop:   this.date_stop,
+                    des_select:  this.des_select,
                     type_select: this.type_select
 
                 })
@@ -85,9 +85,9 @@
             },
 
             clear_data: function () {
-                     this.date_start = '',
-                     this.date_stop = '',
-                     this.des_select = '',
+                     this.date_start  = '',
+                     this.date_stop   = '',
+                     this.des_select  = '',
                      this.type_select = ''
             }
 

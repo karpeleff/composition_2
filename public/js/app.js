@@ -47420,7 +47420,7 @@ var render = function() {
       _c(
         "div",
         [
-          _c("label", [_vm._v("start")]),
+          _c("label", [_vm._v("Время пуска")]),
           _vm._v(" "),
           _c("datetime", {
             attrs: { type: "datetime" },
@@ -47433,7 +47433,7 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _c("label", [_vm._v("stop")]),
+          _c("label", [_vm._v("Время останова")]),
           _vm._v(" "),
           _c("datetime", {
             attrs: { type: "datetime" },
@@ -47445,8 +47445,6 @@ var render = function() {
               expression: "date_stop"
             }
           }),
-          _vm._v(" "),
-          _c("br"),
           _vm._v(" "),
           _c("br"),
           _vm._v(" "),
@@ -47481,7 +47479,9 @@ var render = function() {
               }
             },
             [
-              _c("option", { attrs: { value: "SD16-5" } }, [_vm._v("SD16-5")]),
+              _c("option", { attrs: { value: "ADR16-5" } }, [
+                _vm._v("ADR16-5")
+              ]),
               _vm._v(" "),
               _c("option", { attrs: { value: "SD6000E" } }, [
                 _vm._v("SD6000E")
