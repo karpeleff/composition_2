@@ -24,10 +24,13 @@ Route::post('/des/add_work_time', 'HomeController@add_time')->name('add_time');
 
 //
 
-Route::resource('/document','api\v1\DocumentController');
+
 
 Route::get('/info',function ()
 {
     phpinfo();
 });
+
+
+
 

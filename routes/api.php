@@ -13,6 +13,15 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::Resource('/v1/document','api\v1\DocumentController');
+
+
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+
+
+
 });
+
+
