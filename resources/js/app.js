@@ -8,6 +8,11 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+//import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
 
 
 /**
@@ -23,6 +28,7 @@ window.Vue = require('vue');
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('work_time_engine', require('./components/Work_Time_Engine.vue').default);
+Vue.component('notes', require('./components/Notes.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -33,5 +39,6 @@ Vue.component('work_time_engine', require('./components/Work_Time_Engine.vue').d
 
 const app = new Vue({
     el: '#app',
+
 
 });
