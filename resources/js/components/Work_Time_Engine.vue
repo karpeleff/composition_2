@@ -77,7 +77,8 @@
 
                 })
                     .then(function (response) {
-                        console.log(response);
+                        //console.log(response);
+                        alert('data added');
                     })
                     .catch(function (error) {
                         console.log(error);

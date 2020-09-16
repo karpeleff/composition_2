@@ -2001,7 +2001,8 @@ Vue.component('datetime', vue_datetime__WEBPACK_IMPORTED_MODULE_0__["Datetime"])
         des_select: this.des_select,
         type_select: this.type_select
       }).then(function (response) {
-        console.log(response);
+        //console.log(response);
+        alert('data added');
       })["catch"](function (error) {
         console.log(error);
       });
