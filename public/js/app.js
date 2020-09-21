@@ -1912,8 +1912,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Notes"
+  name: "Notes",
+  data: function data() {
+    return {
+      status: '',
+      payload: ''
+    };
+  },
+  methods: {
+    sendData: function sendData() {
+      axios.post('api/v1/document', {
+        status: this.status,
+        payload: this.payload
+      }).then(function (response) {
+        //console.log(response);
+        alert('data added');
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -47435,7 +47461,55 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v(" i am main component notes")])
+  return _c("div", [
+    _c("h2", [_vm._v("Add note")]),
+    _vm._v(" "),
+    _c("form", [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.status,
+            expression: "status"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.status },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.status = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.payload,
+            expression: "payload"
+          }
+        ],
+        attrs: { type: "textarea" },
+        domProps: { value: _vm.payload },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.payload = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.sendData } }, [_vm._v("add")])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

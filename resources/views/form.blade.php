@@ -7,15 +7,8 @@
                 <div class="card">
                     <div class="card-header">Dashboard</div>
 
-                    <div class="card-body">
-                      <form action={{ asset('api/v1/document') }} method="post" >
+                    <notes></notes>
 
-                          <input type="text" name="status">
-                          <input type="text" name="payload">
-                          <button type="submit" >add</button>
-
-
-                      </form>
                     </div>
                 </div>
             </div>
